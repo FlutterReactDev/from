@@ -116,14 +116,14 @@ $(document).ready(function () {
       },
     ],
   });
-
+  $(".table-inner").css({display:'none'})
   $(".table-button").click(function () {
     $(".table-arrow").toggleClass("hide");
     $(".table-button").toggleClass("hide");
     if ($(".table-button").hasClass("hide")) {
       $(".table-button button").text("Развернуть таблицу");
     } else {
-      $(".table-button button").text(" Свернуть таблицу");
+      $(".table-button button").text("Свернуть таблицу");
     }
     $(".table-inner").animate({
       height: "toggle",
