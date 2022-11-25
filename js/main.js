@@ -26,6 +26,7 @@ $(document).ready(function () {
     autoplaySpeed: 2000,
     pauseOnDotsHover: true,
     pauseOnFocus: false,
+    pauseOnHover:false,
     dots: true,
     responsive: [
       {
