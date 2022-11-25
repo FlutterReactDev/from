@@ -157,12 +157,12 @@ $(document).ready(function () {
     }
   );
 
-    if($(window).width() <= 768) {
+   if($(window).width() <= 768) {
       $('.nodone').css({height:750})
-    }
+  }
   $(".nodone-button").click(function () {
     $('.nodone-top').remove()
-    $('.nodone').animate({height: $('.nodone').get(0).scrollHeight},100);
+    $('.nodone').animate({height: $('.nodone').get(0).scrollHeight},150);
     $('.nodone-border').css({pointerEvents:'auto'})
     $('.nodone-shadow').remove()
   });
