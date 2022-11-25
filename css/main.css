@@ -1167,6 +1167,9 @@ ul {
 .table-inner {
   display: none;
 }
+.tablemb-inner .slick-track{
+  display: none ;
+}
 .table-wrap {
   display: flex;
   padding: 0 0 40px 0;

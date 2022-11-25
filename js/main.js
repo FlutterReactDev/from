@@ -116,7 +116,7 @@ $(document).ready(function () {
       },
     ],
   });
-  $(".table-inner").css({display:'none'})
+  $(".table-inner").css({ display: "none" });
   $(".table-button").click(function () {
     $(".table-arrow").toggleClass("hide");
     $(".table-button").toggleClass("hide");
@@ -125,10 +125,33 @@ $(document).ready(function () {
     } else {
       $(".table-button button").text("Свернуть таблицу");
     }
-    $(".table-inner").animate({
-      height: "toggle",
-    });
+    if($(window).width() <= 480) {
+      $(".tablemb-inner .slick-track").animate({
+        height: "toggle",
+      });
+    }else {
+      $(".table-inner").animate({
+        height: "toggle",
+      });
+    }
+    
   });
+
+  const tablembTitle = ["Корпоративный", "Доступный", "Облачный", "Вебинар"];
+  $(".tablemb-inner").slick({
+    prevArrow: document.querySelector(".tablemb-arrow--left"),
+    nextArrow: document.querySelector(".tablemb-arrow--right"),
+    swipe: false,
+  });
+
+  $(".tablemb-inner").on(
+    "beforeChange",
+    function (event, slick, currentSlide, nextSlide) {
+      $(".tablemb-title").fadeOut(200, () => {
+        $(".tablemb-title").text("").text(tablembTitle[nextSlide]).fadeIn(200);
+      });
+    }
+  );
 });
 
 const burger = document.querySelector(".burger");
