@@ -853,7 +853,9 @@
 	.modal__inner2 {
 		width: auto;
 	}
-
+	.nodone-top {
+		transform: translateY(40%);
+	}
 	.modal {
 		position: fixed;
 		top: 0px;
